@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>This group gets data form a webservice URL, unpacks it and uploads it to CKAN.
+If the package is already there it will create a snapshot with a different name and then update the package.</description>
+    <groupId>e2a2ad3e-0162-1000-998d-4267a8ae6178</groupId>
+    <name>Upload_CKAN_with_decompresion</name>
+    <snippet>
+        <processGroups>
+            <id>24f76aba-9889-33c4-0000-000000000000</id>
+            <parentGroupId>a0ceed21-eda6-35da-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments>This group gets data form a webservice URL, unpacks it and uploads it to CKAN.
+If the package is already there it will create a snapshot with a different name and then update the package.</comments>
+            <contents>
+                <connections>
+                    <id>924cacb7-b50e-3aed-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>c271507a-58c5-363d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>de617e05-79a4-3f2c-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>a8c823dc-8aa2-376c-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>de617e05-79a4-3f2c-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>7c6fa1ed-0e21-3650-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>c1f83965-2db8-33b4-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>7c6fa1ed-0e21-3650-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Response</selectedRelationships>
+                    <source>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>09c596f8-2fe0-37ed-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>59eda6ae-3775-3456-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>b98a2032-819f-3551-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>BACKUP_SUCCESS</selectedRelationships>
+                    <selectedRelationships>NO_PACKAGE_FOUND</selectedRelationships>
+                    <source>
+                        <groupId>24f76aba-9889-33c4-0000-000000000000</groupId>
+                        <id>c271507a-58c5-363d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <labels>
+                    <id>9e031365-69d6-33e2-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1317.5844720294394</x>
+                        <y>-680.3021267949674</y>
+                    </position>
+                    <height>40.359413146972656</height>
+                    <label>Change the attribute data.package.name to the name 
+of the CKAN dataset you want to upload the file to</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>304.39166259765625</width>
+                </labels>
+                <labels>
+                    <id>a3feeead-e6a1-3929-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>907.7236321856894</x>
+                        <y>-671.7387112676237</y>
+                    </position>
+                    <height>35.88428497314453</height>
+                    <label>Change the filter from .gml to your data extension</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>292.08514404296875</width>
+                </labels>
+                <labels>
+                    <id>b2c56d57-b13e-349a-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>468.77453550600194</x>
+                        <y>-663.1752957402799</y>
+                    </position>
+                    <height>35.88428497314453</height>
+                    <label>Fill in the url where the data is stored</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>279.77862548828125</width>
+                </labels>
+                <labels>
+                    <id>009b8b79-5842-3653-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>921.9226678302207</x>
+                        <y>-253.65960970512367</y>
+                    </position>
+                    <height>35.88428497314453</height>
+                    <label>Fill in the CKAN api url and the api key</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>292.08514404296875</width>
+                </labels>
+                <labels>
+                    <id>0c5051d1-bc14-3782-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1336.6037591388144</x>
+                        <y>-259.64032259574867</y>
+                    </position>
+                    <height>35.88428497314453</height>
+                    <label>Fill in the CKAN api url and the api key</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>292.08514404296875</width>
+                </labels>
+                <processors>
+                    <id>b98a2032-819f-3551-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>880.2113818697924</x>
+                        <y>-402.4815642959204</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-nifiCKANFlowfileUploader-nar</artifact>
+                        <group>net.atos.qrowd</group>
+                        <version>1.0.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>CKAN_url</key>
+<value>
+    <name>CKAN_url</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Api_Key</key>
+<value>
+    <name>Api_Key</name>
+</value>
+                            </entry>
+                            <entry>
+<key>organization_id</key>
+<value>
+    <name>organization_id</name>
+</value>
+                            </entry>
+                            <entry>
+<key>package_name</key>
+<value>
+    <name>package_name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>package_description</key>
+<value>
+    <name>package_description</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Package visibility</key>
+<value>
+    <name>Package visibility</name>
+</value>
+                            </entry>
+                            <entry>
+<key>tag_list</key>
+<value>
+    <name>tag_list</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>CKAN_url</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                            <entry>
+<key>Api_Key</key>
+                            </entry>
+                            <entry>
+<key>organization_id</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                            <entry>
+<key>package_name</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                            <entry>
+<key>package_description</key>
+<value>Description added by NiFi</value>
+                            </entry>
+                            <entry>
+<key>Package visibility</key>
+<value>False</value>
+                            </entry>
+                            <entry>
+<key>tag_list</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>CKAN_Flowfile_Uploader</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>SUCCESS</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>net.atos.qrowd.processors.nifiCKANprocessor.CKAN_Flowfile_Uploader</type>
+                </processors>
+                <processors>
+                    <id>c271507a-58c5-363d-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1291.3236463758342</x>
+                        <y>-403.17385696494784</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-nifiCKANDatasetBackup-nar</artifact>
+                        <group>net.atos.qrowd</group>
+                        <version>1.0.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>CKAN_url</key>
+<value>
+    <name>CKAN_url</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Api_Key</key>
+<value>
+    <name>Api_Key</name>
+</value>
+                            </entry>
+                            <entry>
+<key>package_name</key>
+<value>
+    <name>package_name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>tag_list</key>
+<value>
+    <name>tag_list</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>CKAN_url</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                            <entry>
+<key>Api_Key</key>
+                            </entry>
+                            <entry>
+<key>package_name</key>
+                            </entry>
+                            <entry>
+<key>tag_list</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>CKAN_Package_Backup</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>BACKUP_SUCCESS</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>NO_PACKAGE_FOUND</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>net.atos.qrowd.processors.nifiCKANDatasetBackup.CKAN_Package_Backup</type>
+                </processors>
+                <processors>
+                    <id>de617e05-79a4-3f2c-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1299.0810997823876</x>
+                        <y>-624.0495512933171</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-update-attribute-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.6.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Delete Attributes Expression</key>
+<value>
+    <name>Delete Attributes Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Store State</key>
+<value>
+    <name>Store State</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Stateful Variables Initial Value</key>
+<value>
+    <name>Stateful Variables Initial Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>ckan_package_name</key>
+<value>
+    <name>ckan_package_name</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Delete Attributes Expression</key>
+                            </entry>
+                            <entry>
+<key>Store State</key>
+<value>Do not store state</value>
+                            </entry>
+                            <entry>
+<key>Stateful Variables Initial Value</key>
+                            </entry>
+                            <entry>
+<key>ckan_package_name</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Define_Package_Name</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+                </processors>
+                <processors>
+                    <id>09c596f8-2fe0-37ed-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>434.06840554062023</x>
+                        <y>-613.61502403345</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.6.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>HTTP Method</key>
+<value>
+    <name>HTTP Method</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Remote URL</key>
+<value>
+    <name>Remote URL</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+    <name>SSL Context Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Connection Timeout</key>
+<value>
+    <name>Connection Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Read Timeout</key>
+<value>
+    <name>Read Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Include Date Header</key>
+<value>
+    <name>Include Date Header</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Follow Redirects</key>
+<value>
+    <name>Follow Redirects</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Send</key>
+<value>
+    <name>Attributes to Send</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Username</key>
+<value>
+    <name>Basic Authentication Username</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Password</key>
+<value>
+    <name>Basic Authentication Password</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Host</key>
+<value>
+    <name>Proxy Host</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Port</key>
+<value>
+    <name>Proxy Port</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Type</key>
+<value>
+    <name>Proxy Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-user</key>
+<value>
+    <name>invokehttp-proxy-user</name>
+</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-password</key>
+<value>
+    <name>invokehttp-proxy-password</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Put Response Body In Attribute</key>
+<value>
+    <name>Put Response Body In Attribute</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Max Length To Put In Attribute</key>
+<value>
+    <name>Max Length To Put In Attribute</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Digest Authentication</key>
+<value>
+    <name>Digest Authentication</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Always Output Response</key>
+<value>
+    <name>Always Output Response</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Trusted Hostname</key>
+<value>
+    <name>Trusted Hostname</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Add Response Headers to Request</key>
+<value>
+    <name>Add Response Headers to Request</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Content-Type</key>
+<value>
+    <name>Content-Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>send-message-body</key>
+<value>
+    <name>send-message-body</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Use Chunked Encoding</key>
+<value>
+    <name>Use Chunked Encoding</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Penalize on "No Retry"</key>
+<value>
+    <name>Penalize on "No Retry"</name>
+</value>
+                            </entry>
+                            <entry>
+<key>use-etag</key>
+<value>
+    <name>use-etag</name>
+</value>
+                            </entry>
+                            <entry>
+<key>etag-max-cache-size</key>
+<value>
+    <name>etag-max-cache-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>HTTP Method</key>
+<value>GET</value>
+                            </entry>
+                            <entry>
+<key>Remote URL</key>
+<value>&lt;fill_me&gt;</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+                            </entry>
+                            <entry>
+<key>Connection Timeout</key>
+<value>5 secs</value>
+                            </entry>
+                            <entry>
+<key>Read Timeout</key>
+<value>15 secs</value>
+                            </entry>
+                            <entry>
+<key>Include Date Header</key>
+<value>True</value>
+                            </entry>
+                            <entry>
+<key>Follow Redirects</key>
+<value>True</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Send</key>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Username</key>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Password</key>
+                            </entry>
+                            <entry>
+<key>Proxy Host</key>
+                            </entry>
+                            <entry>
+<key>Proxy Port</key>
+                            </entry>
+                            <entry>
+<key>Proxy Type</key>
+<value>http</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-user</key>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-password</key>
+                            </entry>
+                            <entry>
+<key>Put Response Body In Attribute</key>
+                            </entry>
+                            <entry>
+<key>Max Length To Put In Attribute</key>
+<value>256</value>
+                            </entry>
+                            <entry>
+<key>Digest Authentication</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Always Output Response</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Trusted Hostname</key>
+                            </entry>
+                            <entry>
+<key>Add Response Headers to Request</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Content-Type</key>
+<value>${mime.type}</value>
+                            </entry>
+                            <entry>
+<key>send-message-body</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Use Chunked Encoding</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Penalize on "No Retry"</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>use-etag</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>etag-max-cache-size</key>
+<value>10MB</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>1800 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>InvokeHTTP</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>No Retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Original</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Response</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Retry</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                </processors>
+                <processors>
+                    <id>7c6fa1ed-0e21-3650-0000-000000000000</id>
+                    <parentGroupId>24f76aba-9889-33c4-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>886.3174054884169</x>
+                        <y>-621.3402468900708</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.6.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Packaging Format</key>
+<value>
+    <name>Packaging Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>
+    <name>File Filter</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Packaging Format</key>
+<value>use mime.type attribute</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>.gml</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>UnpackContent</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>original</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.UnpackContent</type>
+                </processors>
+            </contents>
+            <name>Upload_CKAN_with_decompresion</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>10/22/2018 16:07:08 CEST</timestamp>
+</template>
